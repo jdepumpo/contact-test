@@ -1,0 +1,19 @@
+doctype html
+head
+  meta(charset='utf-8')
+  title Mailgun Form
+  link(rel='stylesheet', type='text/css', href='form.css')
+body
+.container
+  form#mgform(action='', method='post')
+    h3 Contact Us!
+    h4 We'll reply as fast as we can!
+    fieldset
+      input(placeholder='Your name', id='name', type='text', tabindex='1', required='', autofocus='')
+    fieldset
+      input(placeholder='Your Email Address', type='email', id='mail', tabindex='2', required='')
+    fieldset
+      textarea(placeholder='Type your message here....', id='message', tabindex='5', required='')
+    fieldset
+      button#contact-submit(name='submit', type='submit', data-submit='...Sending', value='sendbut', onclick='mgform.hid=this.value') Submit
+  script(type="text/javascript" src="main.js")
