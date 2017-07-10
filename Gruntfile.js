@@ -1,21 +1,22 @@
-// Gruntfile.js
 module.exports = function(grunt) {
 
+  // Project configuration.
   grunt.initConfig({
-
-    // configure nodemon
-    nodemon: {
-      dev: {
-        script: 'app.js'
+    pkg: grunt.file.readJSON('package.json'),
+    uglify: {
+      options: {
+        banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
+      },
+      build: {
+        src: 'src/app.js',
+        dest: 'build/app.min.js'
       }
     }
-
   });
 
-  // load nodemon
-  grunt.loadNpmTasks('grunt-nodemon');
+  // Load the plugin that provides the "uglify" task.
+  grunt.loadNpmTasks('grunt-contrib-uglify');
 
-  // register the nodemon task when we run grunt
-  grunt.registerTask('default', ['nodemon']);  
-
+  // Default task(s).
+  grunt.registerTask('default', ['uglify']);
 };

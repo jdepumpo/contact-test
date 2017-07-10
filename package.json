@@ -2,8 +2,9 @@
   "name": "email",
   "version": "0.0.1",
   "private": true,
-  "scripts": {
-    "start": "grunt"
+"scripts": {
+    "postinstall": "grunt uglify",
+    "start": "node app.js"
   },
   "dependencies": {
     "express": "^4.15.3",
