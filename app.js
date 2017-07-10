@@ -2,6 +2,7 @@ var express = require('express');
 var Mailgun = require('mailgun-js');
 var app = express();
 
+var port = process.env.PORT || 8080;
 
 //Mailgun API key
 var api_key = 'key-88275845393408d834b1942e9885649a';
@@ -67,4 +68,6 @@ app.get('/sendbut/:mail', function(req,res) {
 
 });
 
-app.listen(8080);
+app.listen(port, function() {
+    console.log('Our app is running on http://localhost:' + port);
+});
