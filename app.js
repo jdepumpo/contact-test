@@ -8,7 +8,7 @@ var port = process.env.PORT || 8080;
 var api_key = 'key-88275845393408d834b1942e9885649a';
 
 //Your domain, from the Mailgun Control Panel
-var domain = 'YOUR-DOMAIN.com';
+var domain = 'https://depumpo.com';
 
 //Your sending email address
 var from_who = 'dev@depumpo.com';
