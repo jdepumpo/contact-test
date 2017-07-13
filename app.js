@@ -8,10 +8,10 @@ var port = process.env.PORT || 8080;
 var api_key = 'key-88275845393408d834b1942e9885649a';
 
 //Your domain, from the Mailgun Control Panel
-var domain = 'https://depumpo.com';
+var domain = 'mg.jfd3.us;
 
 //Your sending email address
-var from_who = 'dev@depumpo.com';
+var from_who = 'postmaster@mg.jfd3.us';
 
 //Tell express to fetch files from the /js directory & /views directory
 app.use(express.static(__dirname + '/js'));
