@@ -8,7 +8,7 @@ var port = process.env.PORT || 8080;
 var api_key = 'key-88275845393408d834b1942e9885649a';
 
 //Your domain, from the Mailgun Control Panel
-var domain = 'mg.jfd3.us;
+var domain = 'mg.jfd3.us';
 
 //Your sending email address
 var from_who = 'postmaster@mg.jfd3.us';
