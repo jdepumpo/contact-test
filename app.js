@@ -44,10 +44,10 @@ app.get('/sendbut/:mail', function(req,res) {
 
     var data = {
     //The email
-      from: req.params.mail,
+      from: 'MG Contact Form <mg@mg.jfd3.us>',
       to: 'dev@depumpo.com',
-      subject: 'New Message - Contact Form',
-      html: req.params.message,
+      subject: 'New Message - Contact Form:' + req.params.name,
+      html: 'Sender Name: ' + req.params.name + 'Message: ' + req.params.message,
     }
 
     //Method to send the email
